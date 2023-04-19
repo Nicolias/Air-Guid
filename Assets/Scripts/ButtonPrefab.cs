@@ -7,13 +7,13 @@ public class ButtonPrefab : MonoBehaviour
     private TextDisplayer _textDisplayer;
     private Button _button;
 
-    private string _text;
+    private ButtonScriptableObject _data;
 
     public void Initialize(TextDisplayer textDisplayer, ButtonScriptableObject data)
     {
         _textDisplayer = textDisplayer;
 
-        _text = data.Discription;
+        _data = data;
         _button.image.sprite = data.ButtonSprite;
     }
 
@@ -34,7 +34,7 @@ public class ButtonPrefab : MonoBehaviour
 
     private void ShowText()
     {
-        _textDisplayer.ShowText(_text);
+        _textDisplayer.ShowText(_data);
     }
 
 }

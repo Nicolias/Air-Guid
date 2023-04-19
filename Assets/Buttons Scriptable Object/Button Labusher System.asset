@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b290e828f424aaa449683dd7a5c408c6, type: 3}
-  m_Name: Button What Is Aviator
+  m_Name: Button Labusher System
   m_EditorClassIdentifier: 
-  _buttonSprite: {fileID: 21300000, guid: 5a70855cbc369cb4abed7f48755890b8, type: 3}
+  _buttonSprite: {fileID: 21300000, guid: 1da8fe1acd0c8be41bdaec04d75f2768, type: 3}
   _lable: "\u0427\u0442\u043E \u0442\u0430\u043A\u043E\u0435 \u0410\u0432\u0438\u0430\u0442\u043E\u0440?"
   _discription: "\u0421\u0445\u0435\u043C\u0430 \u0438\u0433\u0440\u044B \u0410\u0432\u0438\u0430\u0442\u043E\u0440
     \u043F\u043E\u0441\u0442\u0440\u043E\u0435\u043D\u0430 \u0442\u0430\u043A:\r\n-

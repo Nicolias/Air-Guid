@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class TextDisplayer : MonoBehaviour
 {
     [SerializeField] private Button _closeButton;
-    [SerializeField] private TMP_Text _tmpText;
+
+    [SerializeField] private TMP_Text _discriptionText, _lable;
 
     private void OnEnable()
     {
@@ -19,10 +20,11 @@ public class TextDisplayer : MonoBehaviour
         _closeButton.onClick.RemoveAllListeners();
     }
 
-    public void ShowText(string text)
+    public void ShowText(ButtonScriptableObject data)
     {
         gameObject.SetActive(true);
 
-        _tmpText.text = text;
+        _discriptionText.text = data.Discription;
+        _lable.text = data.Lable;
     }
 }
