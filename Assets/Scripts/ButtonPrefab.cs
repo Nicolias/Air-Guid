@@ -5,9 +5,10 @@ using UnityEngine.UI;
 public class ButtonPrefab : MonoBehaviour
 {
     private TextDisplayer _textDisplayer;
-    private Button _button;
-
     private ButtonScriptableObject _data;
+
+    private Button _button;
+    public Button Button => _button;
 
     public void Initialize(TextDisplayer textDisplayer, ButtonScriptableObject data)
     {

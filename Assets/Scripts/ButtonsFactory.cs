@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class ButtonsFactory : MonoBehaviour
 {
@@ -8,6 +9,17 @@ public class ButtonsFactory : MonoBehaviour
     [SerializeField] private List<ButtonScriptableObject> _buttonsData;
     [SerializeField] private Transform _container;
     [SerializeField] private ButtonPrefab _buttonPrefab;
+
+    private AdsServise _adsServise;
+
+    private List<ButtonPrefab> _allButtons;
+    public List<ButtonPrefab> AllButtons => _allButtons;
+
+    [Inject]
+    private void Construct(AdsServise adsServise)
+    {
+        _adsServise = adsServise;
+    }
 
     private void Start()
     {
@@ -20,6 +32,9 @@ public class ButtonsFactory : MonoBehaviour
         {
             var button = Instantiate(_buttonPrefab, _container);
             button.Initialize(_textDisplayer, buttonData);
+            _allButtons.Add(button);
         }
+
+        _adsServise.AddButtonsForShowAds(_allButtons);
     }
 }
