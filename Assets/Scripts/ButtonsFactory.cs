@@ -12,7 +12,7 @@ public class ButtonsFactory : MonoBehaviour
 
     private AdsServise _adsServise;
 
-    private List<ButtonPrefab> _allButtons;
+    private List<ButtonPrefab> _allButtons = new();
     public List<ButtonPrefab> AllButtons => _allButtons;
 
     [Inject]
